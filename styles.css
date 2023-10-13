@@ -1,0 +1,31 @@
+.contact{
+    transition: 1s ease;
+    width: 150px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+}
+.contact::before{
+    width: 0px;
+    height: 50px;
+    transition:  0.7s ease;
+    position: absolute;
+    background-color: black;
+    content: '';
+    display: block;
+    margin-left: -10px;
+    border-radius: 10px;
+    margin-top: -14px;
+    z-index: -1;
+}
+.contact:hover{
+    color: white;
+}
+.contact:hover::before{
+    width: 150px;
+}
